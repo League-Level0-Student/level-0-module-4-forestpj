@@ -8,18 +8,39 @@ public class SleepyHead {
 	public static void main(String[] args) {
 
 		// boolean variables can only hold one of two values - true or false
+		//int number = 0;
+		//double number2 =2;
+		//String words = "word";
+		//char c = 'A';
+		//boolean isTrue = false;
+		//isTrue = true;
+		//if(isTrue == true) {
+			
+		//}
 
 		/************************  SLEEPY HEAD  **************************/
 		boolean isWeekend;
 		// Write code to ask the user what day it is.
-        
+        String day = JOptionPane.showInputDialog(null, "what day is it?");
 		// Set the boolean isWeekend based on the value they enter
-		
+	    if(day.equals ("Saturday")) {
+	    	isWeekend = true;
+	    }
+	    else if(day.equals("Sunday")) {
+			isWeekend = true;
+		}
+		else {
+			isWeekend = false;
+		}
 		
 		// If it is the weekend, tell the user they get to sleep in.
-		
+	if (isWeekend){
+		JOptionPane.showMessageDialog(null, "you can sleep in");
+	}
 		// If it is not the weekend, tell them to get out of bed and go to school!
-		
+	if (!isWeekend) {
+		JOptionPane.showMessageDialog(null, "get out of bed and go to school!");
+	}
 		
 		/************************   STAR STUDENT  **************************/
 
