@@ -46,15 +46,26 @@ public class SleepyHead {
 
 		boolean passedExam;
 		// Write code to ask the user what percentage they scored in their last exam
-
+		String score = JOptionPane.showInputDialog(null, "What was your score for your last exam?");
+		double doublepassedExam = Double.parseDouble(score);
 		
 		// If they scored more than 70, they passed the exam.
 		// Set the boolean passedExam based on their score.
-		
+		if(doublepassedExam>=70) {
+			passedExam = true;
+		}
+		else {
+			passedExam = false;
+		}
 		// If the user passed the exam, congratulate them
-		
+		if (passedExam){
+			JOptionPane.showMessageDialog(null, "you pass");
+		}
+
 		// otherwise, wish them better luck next time.
-		
+		if (!passedExam){
+			JOptionPane.showMessageDialog(null, "you don't pass");
+		}
 		
 		/************************  GAME OVER  **************************/
 
@@ -67,32 +78,43 @@ public class SleepyHead {
 				gameIsOver = true;
 			
 			// If they answer "yes", change gameIsOver to true
-
+if(gameOver.equals("yes")) {
+	gameIsOver = true;
+}
 		}
 		// Tell the user "game is over" 
-		
+		if (gameIsOver){
+			JOptionPane.showMessageDialog(null, "game is over");
+		}
 		
 		/***********************   RED SQUARE  ********************/
 		
-		boolean isRed;
+		boolean isRed=false;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
-		
-		
-		boolean isSquare;		
+		String red = JOptionPane.showInputDialog("what color do you want to draw with");
+		if (red.equals("red")){
+			isRed = true;
+		}
+		boolean isSquare=false;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
-		
-		
+		String square = JOptionPane.showInputDialog("what shape do you want to draw");
+		if (square.equals("square")){
+			isSquare = true;
+		}
 		// Now you MUST use the && operator to join the booleans for this code. 
 		// Ask your teacher if you are not sure how
 		// Use an if statement to ONLY draw a red square when it has been requested (use the method below)
 		// otherwise, tell the user you don't know how to draw that shape
-		
+		if (isRed==true && isSquare==true) {
+			
+		}
 
 	}
 
 	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
+		rob.penDown();
 		// Complete the rest of this method
 	}	
 }
